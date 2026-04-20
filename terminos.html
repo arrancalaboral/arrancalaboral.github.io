@@ -1,22 +1,379 @@
-<div class="terminos-container">
-  <h1>Términos y Condiciones</h1>
-  <h2>1. Aceptación</h2>
-  <p>Al contratar nuestros servicios aceptas estos términos. Si no estás de acuerdo, no contrates.</p>
-  <h2>2. Servicios</h2>
-  <p>Ofrecemos CV, cartas, logos, animaciones, videos y landing pages (máx. 5 secciones). Entregamos en 24-48h (CVs) y 5-7 días (webs), salvo acuerdo distinto. Nuestros entregables están diseñados con criterio profesional para obtener los mejores resultados posibles con base en la información proporcionada.</p>
-  <h2>3. Pagos</h2>
-  <p><strong>Todo servicio se paga por adelantado.</strong> Los precios no incluyen impuestos. Si requieres factura, avísanos al pagar y se agrega 16% de IVA. Otros impuestos aplicables corren por cuenta del cliente. Sin pago no iniciamos.</p>
-  <h2>4. Proceso y Revisiones</h2>
-  <p>Al enviar el formulario confirmas que la información proporcionada es correcta y completa. Con base en ella producimos tu entregable con criterio profesional. <strong>Solo se atienden correcciones menores derivadas de errores atribuibles a Arranca Laboral.</strong> No se aceptan cambios de concepto, modificaciones estéticas posteriores a la entrega ni ajustes al alcance original. Si la información proporcionada fue incorrecta o incompleta, las correcciones tienen costo adicional.</p>
-  <h2>5. Propiedad y Liberación</h2>
-  <p>Los archivos finales son para tu uso exclusivo, incluyendo el derecho a registrar la marca ante las autoridades correspondientes. En páginas web, el código se aloja en nuestra infraestructura. Si quieres migrarlo a otro proveedor, la liberación tiene un costo igual al desarrollo inicial.</p>
-  <h2>6. Responsabilidad</h2>
-  <p>Entregamos un trabajo profesional, pero no garantizamos resultados específicos (empleo, ventas, etc.).</p>
-  <h2>7. Datos</h2>
-  <p>Usamos tu nombre, email y WhatsApp solo para prestarte el servicio. No compartimos tus datos con nadie.</p>
-  <h2>8. Cancelaciones</h2>
-  <p>Si cancelas dentro de la primera hora después de tu pago y antes de que iniciemos la producción, realizamos el reembolso completo. Pasada esa hora no hay reembolsos.</p>
-  <h2>9. Ley</h2>
-  <p>Estos términos se rigen por leyes de Yucatán, México. Cualquier controversia será en tribunales de Mérida.</p>
-  <p><small>Última actualización: 19 de marzo de 2026</small></p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arranca Laboral - Términos y Condiciones</title>
+  <link rel="icon" type="image/png" href="img/favicon-64x64.png"> 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ========== ESTILOS COPIADOS TEXTUALMENTE DE TU WEB ========== */
+    :root {
+      --azul: #1e3a8a;
+      --azul-medio: #2563eb;
+      --verde: #22c55e;
+      --verde-oscuro: #16a34a;
+      --blanco: #ffffff;
+      --gris-claro: #f0f4ff;
+      --gris-texto: #64748b;
+      --negro: #0f172a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blanco);
+      color: var(--negro);
+      overflow-x: hidden;
+    }
+
+    /* BANNER */
+    .banner-lanzamiento {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 102;
+      background: linear-gradient(90deg, #1e3a8a, #2563eb);
+      color: #fff;
+      text-align: center;
+      padding: 0.55rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 2.1rem;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .nav-logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.03em;
+      color: var(--azul);
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span {
+      color: var(--verde-oscuro);
+    }
+
+    .nav-slogan {
+      display: block;
+      font-size: 0.7rem;
+      color: #4a5568;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--azul);
+      font-weight: 500;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--verde-oscuro);
+    }
+
+    .nav-cta {
+      background: var(--verde) !important;
+      color: var(--blanco) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-weight: 700 !important;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--verde-oscuro) !important;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--negro);
+      color: rgba(255, 255, 255, 0.5);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer-marca {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--blanco);
+      letter-spacing: -0.02em;
+    }
+
+    .footer-marca span {
+      color: var(--verde);
+    }
+
+    footer a {
+      color: var(--verde);
+      text-decoration: none;
+    }
+
+    /* ========== ESTILOS EXCLUSIVOS PARA TÉRMINOS ========== */
+    .terminos-main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10rem 2rem 5rem;
+    }
+
+    .terminos-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .terminos-header h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--azul);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .terminos-header p {
+      color: var(--gris-texto);
+      border-left: 4px solid var(--verde);
+      padding-left: 1.2rem;
+      margin-top: 0.8rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .terminos-contenido {
+      background: var(--blanco);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(30, 58, 138, 0.08);
+    }
+
+    .terminos-contenido h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--azul);
+      margin: 2rem 0 0.8rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    .terminos-contenido h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .terminos-contenido p {
+      color: var(--negro);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    .terminos-contenido strong {
+      color: var(--azul-medio);
+      font-weight: 600;
+    }
+
+    .terminos-contenido small {
+      display: block;
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(30, 58, 138, 0.1);
+      color: var(--gris-texto);
+      font-size: 0.8rem;
+    }
+
+    .btn-volver {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--azul);
+      color: var(--blanco);
+      padding: 0.8rem 1.8rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      transition: all 0.2s;
+    }
+
+    .btn-volver:hover {
+      background: var(--azul-medio);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
+    }
+
+    .redes-footer {
+      margin: 10px 0;
+      font-size: 0.8rem;
+    }
+
+    .redes-footer a {
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    .redes-footer a:hover {
+      color: var(--verde);
+    }
+
+    @media (max-width: 768px) {
+      .terminos-main {
+        padding: 8rem 1.5rem 3rem;
+      }
+      .terminos-contenido {
+        padding: 1.5rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BANNER (EXACTAMENTE IGUAL) -->
+  <div class="banner-lanzamiento">
+    🔥 Precios de lanzamiento - Solo por tiempo limitado.
+    <span style="opacity:0.85; font-weight:400;">Aprovecha antes de que suban.</span>
+  </div>
+
+  <!-- NAV (EXACTAMENTE IGUAL - CON EL SLOGAN) -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo-arranca.png" alt="Arranca Laboral" />
+      <span class="nav-logo-text">
+        Arranca <span>Laboral</span>
+        <span class="nav-slogan">De empleado a dueño</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#cvs">CVs y Cartas</a></li>
+      <li><a href="index.html#identidad">Identidad y Publicidad</a></li>
+      <li><a href="index.html#webs">Páginas Web</a></li>
+      <li><a href="index.html#contacto" class="nav-cta">Cotizar ahora</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO DE TÉRMINOS Y CONDICIONES (COMPLETO) -->
+  <main class="terminos-main">
+    <div class="terminos-header">
+      <h1>Términos y Condiciones</h1>
+      <p>Al contratar nuestros servicios, aceptas las siguientes condiciones. Leer antes de realizar cualquier pago.</p>
+    </div>
+
+    <div class="terminos-contenido">
+      <h2>1. Aceptación</h2>
+      <p>Al contratar nuestros servicios aceptas estos términos. Si no estás de acuerdo, no contrates.</p>
+
+      <h2>2. Servicios</h2>
+      <p>Ofrecemos CV, cartas, logos, animaciones, videos y landing pages (máx. 5 secciones). Entregamos en 24-48h (CVs) y 5-7 días (webs), salvo acuerdo distinto. Nuestros entregables están diseñados con criterio profesional para obtener los mejores resultados posibles con base en la información proporcionada.</p>
+
+      <h2>3. Pagos</h2>
+      <p><strong>Todo servicio se paga por adelantado.</strong> Los precios no incluyen impuestos. Si requieres factura, avísanos al pagar y se agrega 16% de IVA. Otros impuestos aplicables corren por cuenta del cliente. Sin pago no iniciamos.</p>
+
+      <h2>4. Proceso y Revisiones</h2>
+      <p>Al enviar el formulario confirmas que la información proporcionada es correcta y completa. Con base en ella producimos tu entregable con criterio profesional. <strong>Solo se atienden correcciones menores derivadas de errores atribuibles a Arranca Laboral.</strong> No se aceptan cambios de concepto, modificaciones estéticas posteriores a la entrega ni ajustes al alcance original. Si la información proporcionada fue incorrecta o incompleta, las correcciones tienen costo adicional.</p>
+
+      <h2>5. Propiedad y Liberación</h2>
+      <p>Los archivos finales son para tu uso exclusivo, incluyendo el derecho a registrar la marca ante las autoridades correspondientes. En páginas web, el código se aloja en nuestra infraestructura. Si quieres migrarlo a otro proveedor, la liberación tiene un costo igual al desarrollo inicial.</p>
+
+      <h2>6. Responsabilidad</h2>
+      <p>Entregamos un trabajo profesional, pero no garantizamos resultados específicos (empleo, ventas, etc.).</p>
+
+      <h2>7. Datos Personales</h2>
+      <p>Usamos tu nombre, email y WhatsApp solo para prestarte el servicio. No compartimos tus datos con nadie.</p>
+
+      <h2>8. Cancelaciones y Reembolsos</h2>
+      <p>Si cancelas dentro de la primera hora después de tu pago y antes de que iniciemos la producción, realizamos el reembolso completo. Pasada esa hora no hay reembolsos.</p>
+
+      <h2>9. Ley Aplicable</h2>
+      <p>Estos términos se rigen por las leyes de Yucatán, México. Cualquier controversia será resuelta en los tribunales de Mérida, Yucatán.</p>
+
+      <small>Última actualización: 19 de marzo de 2026</small>
+    </div>
+
+    <a href="index.html" class="btn-volver">← Volver al inicio</a>
+  </main>
+
+  <!-- FOOTER (EXACTAMENTE IGUAL) -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-marca">Arranca <span>Laboral</span></div>
+      <p style="font-size:0.83rem;"><a href="mailto:contacto@arrancalaboral.com">contacto@arrancalaboral.com</a></p>
+      
+      <div class="redes-footer">
+        <a href="https://www.facebook.com/profile.php?id=61580577356205" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com/arrancalaboral/" target="_blank">Instagram</a>
+      </div>
+
+      <p style="font-size:0.7rem;">
+        <a href="terminos.html" style="color:rgba(255,255,255,0.5); text-decoration:underline;">Términos y Condiciones</a>
+      </p>
+      <p style="font-size:0.7rem; color:rgba(255,255,255,0.3);">© 2026 Arranca Laboral® | Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
