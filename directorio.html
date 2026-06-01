@@ -8,11 +8,8 @@
   <meta name="keywords" content="directorio, sitios web, landing pages, negocios, México">
   <meta name="author" content="Arranca Laboral">
   <link rel="icon" type="image/png" href="img/favicon-64x64.png">
-  <!-- FONTAWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="css/core/variables.css">
   <link rel="stylesheet" href="css/core/layout.css">
   <link rel="stylesheet" href="css/core/components.css">
@@ -21,16 +18,13 @@
 </head>
 <body>
 
-  <!-- BANNER GLOBAL -->
   <div class="banner-lanzamiento">
     <i class="fas fa-fire"></i> Precios de lanzamiento — Solo por tiempo limitado.
     <span style="opacity:0.85; font-weight:400;"> Los precios subirán pronto.</span>
   </div>
 
-  <!-- NAVBAR GLOBAL -->
   <div id="navbar-placeholder"></div>
 
-  <!-- HERO DIRECTORIO -->
   <div class="hero-directorio">
     <div class="hero-directorio-inner">
       <div class="hero-tag">
@@ -61,10 +55,10 @@
         <label><i class="fas fa-tag"></i> Rubro</label>
         <select id="select-rubro">
           <option value="todos">Todos</option>
-          <option value="alimentos">🍔 Alimentos</option>
-          <option value="productos">📦 Productos</option>
-          <option value="servicios">🔧 Servicios</option>
-          <option value="inmobiliaria">🏠 Inmobiliaria</option>
+          <option value="alimentos">Alimentos</option>
+          <option value="productos">Productos</option>
+          <option value="servicios">Servicios</option>
+          <option value="inmobiliaria">Inmobiliaria</option>
         </select>
       </div>
 
@@ -92,20 +86,16 @@
     </div>
   </div>
 
-  <!-- DIRECTORIO PRINCIPAL -->
   <section class="directorio-principal">
     <div class="section-inner">
       
-      <!-- PROYECTOS DESTACADOS -->
       <div class="negocios-destacados" id="destacados-section">
         <h3><i class="fas fa-crown" style="color: var(--verde);"></i> Proyectos Destacados</h3>
         <div class="destacados-grid" id="destacados-grid"></div>
       </div>
 
-      <!-- DIRECTORIO GRID -->
       <div class="directorio-grid" id="directorio-grid"></div>
 
-      <!-- ESTADÍSTICAS -->
       <div class="directorio-stats">
         <div class="stat-item">
           <span class="stat-number" id="total-negocios">0</span>
@@ -121,22 +111,79 @@
         </div>
       </div>
 
-      <!-- MENSAJE DE CRECIMIENTO -->
-      <div class="crecimiento-mensaje">
-        <i class="fas fa-chart-line"></i>
-        <h3>Directorio en crecimiento</h3>
-        <p>Actualmente tenemos <strong id="proyectos-actuales">2</strong> proyectos registrados. Cada semana agregamos nuevos casos de éxito.</p>
-        <p>¿Quieres ser el próximo en aparecer aquí?</p>
-        <a href="https://wa.me/529992223432?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20el%20directorio" target="_blank" class="btn-directorio">
-          <i class="fab fa-whatsapp"></i> <span>Registrar mi negocio</span>
-        </a>
+      <!-- ========================================== -->
+      <!-- SECCIÓN DE REGISTRO AL DIRECTORIO (SIN EMOJIS) -->
+      <!-- ========================================== -->
+      <div class="registro-directorio">
+        <div class="registro-header">
+          <i class="fas fa-store"></i>
+          <h3>¿Quieres aparecer en este directorio?</h3>
+          <p>Visibilidad para tu negocio y un enlace que mejora tu SEO.</p>
+        </div>
+
+        <div class="registro-opciones">
+          
+          <!-- OPCIÓN 1: CLIENTE NUESTRO (GRATIS) -->
+          <div class="opcion-card">
+            <div class="opcion-icon"><i class="fas fa-check-circle"></i></div>
+            <h4>Ya tienes una web hecha por nosotros</h4>
+            <p>Tu registro en el directorio es <strong>GRATIS</strong> por tiempo indefinido. Solo tienes que solicitarlo.</p>
+            <div class="precio">GRATIS <span>siempre</span></div>
+            <a href="https://wa.me/529992223432?text=Hola,%20ya%20tengo%20mi%20web%20con%20ustedes,%20quiero%20aparecer%20en%20el%20directorio" target="_blank" class="btn-directorio">
+              <i class="fab fa-whatsapp"></i> <span>Solicitar mi registro</span>
+            </a>
+            <div class="opcion-nota">¿Quieres aparecer destacado? +$300 MXN / mes</div>
+          </div>
+
+          <!-- OPCIÓN 2: CLIENTE EXTERNO (YA TIENE WEB) -->
+          <div class="opcion-card">
+            <div class="opcion-icon"><i class="fas fa-globe"></i></div>
+            <h4>Ya tienes web (hecha por otro)</h4>
+            <p>También puedes aparecer en nuestro directorio. Te ayudamos a ganar visibilidad y mejorar tu SEO.</p>
+            <div class="precio">$300 <span>MXN / mes</span></div>
+            <a href="https://wa.me/529992223432?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20el%20directorio%20(ya%20tengo%20web)" target="_blank" class="btn-directorio-outline">
+              <i class="fab fa-whatsapp"></i> <span>Registrar mi negocio</span>
+            </a>
+            <div class="opcion-nota">¿Quieres aparecer destacado? +$300 MXN / mes (total $600)</div>
+          </div>
+
+          <!-- OPCIÓN 3: SIN WEB (CONTRATA CON NOSOTROS) -->
+          <div class="opcion-card premium">
+            <div class="opcion-icon"><i class="fas fa-rocket"></i></div>
+            <h4>Aún no tienes página web</h4>
+            <p>Contrata una web con nosotros y <strong>apareces GRATIS</strong> en el directorio por tiempo indefinido.</p>
+            <div class="precio">Desde $5,000 <span>MXN</span></div>
+            <a href="https://wa.me/529992223432?text=Hola,%20quiero%20contratar%20una%20web%20y%20aparecer%20en%20el%20directorio" target="_blank" class="btn-directorio">
+              <i class="fab fa-whatsapp"></i> <span>Cotizar mi web</span>
+            </a>
+            <div class="opcion-nota">¿Quieres aparecer destacado? +$300 MXN / mes</div>
+          </div>
+
+        </div>
+
+        <!-- TABLA DE PRECIOS -->
+        <div class="registro-tabla">
+          <h4>Resumen de precios</h4>
+          <table>
+            <thead>
+              <tr><th>Tipo de cliente</th><th>Registro estándar</th><th>Destacado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cliente con web nuestra</td><td><strong>GRATIS</strong></td><td>$300 MXN / mes</td></tr>
+              <tr><td>Cliente externo (ya tiene web)</td><td>$300 MXN / mes</td><td>$600 MXN / mes</td></tr>
+              <tr><td>Sin web (contrata con nosotros)</td><td><strong>GRATIS</strong> al contratar</td><td>$300 MXN / mes</td></tr>
+            </tbody>
+          </table>
+          <p class="tabla-nota"><i class="fas fa-info-circle"></i> Los precios son mensuales. Cancela cuando quieras. El registro incluye enlace a tu web y actualización de información.</p>
+        </div>
+
       </div>
 
       <!-- UPGRADE CARD -->
       <div class="upgrade-card">
         <div class="upgrade-content">
           <i class="fas fa-chart-line"></i>
-          <h3>¿Necesitas una página web?</h3>
+          <h3>¿Aún no tienes página web?</h3>
           <p>Tu negocio puede estar aquí. Creamos sitios web profesionales que atraen clientes y generan resultados.</p>
           <a href="https://wa.me/529992223432?text=Hola,%20quiero%20cotizar%20mi%20página%20web" target="_blank" class="btn-directorio">
             <i class="fab fa-whatsapp"></i> <span>Cotizar mi sitio web</span>
@@ -146,10 +193,8 @@
     </div>
   </section>
 
-  <!-- FOOTER GLOBAL -->
   <div id="footer-placeholder"></div>
 
-  <!-- SCRIPTS -->
   <script src="js/components.js"></script>
   <script src="js/directorio-data.js"></script>
 </body>

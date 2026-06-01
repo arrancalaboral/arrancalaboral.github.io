@@ -8,6 +8,12 @@
 // TIPOS DE WEB: landing-page, corporativa, catalogo, ecommerce, blog
 // RUBROS: alimentos, productos, servicios, inmobiliaria
 // COBERTURAS: local, regional, nacional, internacional
+//
+// 📌 LOGOS:
+// ============================================
+// - Si el negocio tiene imagen, usa: logoImg: "img/directorio/mi-logo.png"
+// - Si no tiene imagen, solo usa logoInicial: "T"
+// - Las imágenes deben estar en la carpeta /img/directorio/
 // ============================================
 
 const negociosData = [
@@ -25,6 +31,7 @@ const negociosData = [
     descripcion: "Centro especializado en reparación de computadoras y laptops. Landing page completa con servicios, testimonios, ubicación y botones de acción.",
     url: "https://turbofixcenter.com",
     logoInicial: "T",
+    logoImg: "img/directorio/turbofix-logo.png",  // ← imagen opcional
     destacado: true,
     ubicacion: {
       pais: "México",
@@ -46,6 +53,7 @@ const negociosData = [
     descripcion: "Catálogo en línea de acero estructural. Sistema de cotización integrado y envíos a todo México.",
     url: "https://reinaaceros.com",
     logoInicial: "R",
+    // logoImg: "img/directorio/reinaaceros-logo.png",  // ← descomentar cuando tenga imagen
     destacado: false,
     cobertura: "nacional",
     ubicacion: {
@@ -59,7 +67,7 @@ const negociosData = [
   // 📌 AGREGAR NUEVOS PROYECTOS A PARTIR DE AQUÍ
   // ==========================================
   // 
-  // EJEMPLO:
+  // EJEMPLO CON IMAGEN:
   // {
   //   id: 3,
   //   nombre: "Nombre del Negocio",
@@ -68,6 +76,7 @@ const negociosData = [
   //   descripcion: "Descripción breve del proyecto",
   //   url: "https://www.web.com",
   //   logoInicial: "N",
+  //   logoImg: "img/directorio/negocio-logo.png",  // ← opcional
   //   destacado: false,
   //   cobertura: "local",
   //   ubicacion: {
@@ -75,6 +84,20 @@ const negociosData = [
   //     estado: "Yucatán",
   //     ciudad: "Mérida"
   //   }
+  // },
+  //
+  // EJEMPLO SIN IMAGEN (solo letra):
+  // {
+  //   id: 4,
+  //   nombre: "Otro Negocio",
+  //   tipoWeb: "catalogo",
+  //   rubro: "productos",
+  //   descripcion: "Descripción breve",
+  //   url: "https://www.web.com",
+  //   logoInicial: "O",
+  //   // sin logoImg
+  //   destacado: false,
+  //   ubicacion: { ... }
   // },
   //
   // ==========================================
@@ -238,10 +261,41 @@ function renderizarDirectorio() {
   if (destacadosSection) {
     if (destacados.length > 0) {
       destacadosSection.style.display = 'block';
-      destacadosGrid.innerHTML = destacados.map(negocio => `
-        <div class="negocio-card destacado">
-          <div class="negocio-badge"><i class="fas fa-crown"></i> Destacado</div>
-          <div class="negocio-logo">${negocio.logoInicial}</div>
+      destacadosGrid.innerHTML = destacados.map(negocio => {
+        // Si tiene logoImg, usa imagen; si no, usa logoInicial
+        const logoTemplate = negocio.logoImg 
+          ? `<img src="${negocio.logoImg}" alt="${negocio.nombre}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">` 
+          : negocio.logoInicial;
+        
+        return `
+          <div class="negocio-card destacado">
+            <div class="negocio-badge"><i class="fas fa-crown"></i> Destacado</div>
+            <div class="negocio-logo">${logoTemplate}</div>
+            <h3 class="negocio-nombre">${negocio.nombre}</h3>
+            <div class="negocio-tipo">${formatearTipoWeb(negocio.tipoWeb)}</div>
+            <div class="negocio-rubro">${formatearRubro(negocio.rubro)}</div>
+            ${negocio.cobertura ? `<div class="negocio-cobertura">${formatearCobertura(negocio.cobertura)}</div>` : ''}
+            <div class="negocio-ubicacion"><i class="fas fa-map-marker-alt"></i> ${negocio.ubicacion?.ciudad}, ${negocio.ubicacion?.estado}</div>
+            <p class="negocio-desc">${negocio.descripcion}</p>
+            <a href="${negocio.url}" target="_blank" rel="noopener noreferrer" class="negocio-link">Ver sitio <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        `;
+      }).join('');
+    } else {
+      destacadosSection.style.display = 'none';
+    }
+  }
+  
+  if (estandar.length > 0) {
+    directorioGrid.innerHTML = estandar.map(negocio => {
+      // Si tiene logoImg, usa imagen; si no, usa logoInicial
+      const logoTemplate = negocio.logoImg 
+        ? `<img src="${negocio.logoImg}" alt="${negocio.nombre}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">` 
+        : negocio.logoInicial;
+      
+      return `
+        <div class="negocio-card">
+          <div class="negocio-logo">${logoTemplate}</div>
           <h3 class="negocio-nombre">${negocio.nombre}</h3>
           <div class="negocio-tipo">${formatearTipoWeb(negocio.tipoWeb)}</div>
           <div class="negocio-rubro">${formatearRubro(negocio.rubro)}</div>
@@ -250,25 +304,8 @@ function renderizarDirectorio() {
           <p class="negocio-desc">${negocio.descripcion}</p>
           <a href="${negocio.url}" target="_blank" rel="noopener noreferrer" class="negocio-link">Ver sitio <i class="fas fa-external-link-alt"></i></a>
         </div>
-      `).join('');
-    } else {
-      destacadosSection.style.display = 'none';
-    }
-  }
-  
-  if (estandar.length > 0) {
-    directorioGrid.innerHTML = estandar.map(negocio => `
-      <div class="negocio-card">
-        <div class="negocio-logo">${negocio.logoInicial}</div>
-        <h3 class="negocio-nombre">${negocio.nombre}</h3>
-        <div class="negocio-tipo">${formatearTipoWeb(negocio.tipoWeb)}</div>
-        <div class="negocio-rubro">${formatearRubro(negocio.rubro)}</div>
-        ${negocio.cobertura ? `<div class="negocio-cobertura">${formatearCobertura(negocio.cobertura)}</div>` : ''}
-        <div class="negocio-ubicacion"><i class="fas fa-map-marker-alt"></i> ${negocio.ubicacion?.ciudad}, ${negocio.ubicacion?.estado}</div>
-        <p class="negocio-desc">${negocio.descripcion}</p>
-        <a href="${negocio.url}" target="_blank" rel="noopener noreferrer" class="negocio-link">Ver sitio <i class="fas fa-external-link-alt"></i></a>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   } else if (destacados.length === 0) {
     directorioGrid.innerHTML = `
       <div class="empty-state">
