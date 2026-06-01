@@ -24,6 +24,11 @@
   gap: 0.75rem;
 }
 
+.terminos-header h1 i {
+  font-size: 2rem;
+  color: var(--verde-oscuro);
+}
+
 .terminos-header p {
   color: var(--gris-texto);
   border-left: 4px solid var(--verde);
@@ -50,7 +55,14 @@
   letter-spacing: -0.01em;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
+}
+
+.terminos-contenido h2 i {
+  font-size: 1.5rem;
+  color: var(--verde-oscuro);
+  width: 2rem;
+  text-align: center;
 }
 
 .terminos-contenido h2:first-of-type {
@@ -62,6 +74,7 @@
   line-height: 1.7;
   margin-bottom: 1rem;
   font-size: 0.98rem;
+  padding-left: 2.75rem;
 }
 
 .terminos-contenido strong {
@@ -76,25 +89,93 @@
   border-top: 1px solid rgba(30, 58, 138, 0.1);
   color: var(--gris-texto);
   font-size: 0.8rem;
+  text-align: center;
 }
+
+.terminos-contenido small i {
+  margin-right: 0.3rem;
+  color: var(--verde-oscuro);
+}
+
+/* ========================================== */
+/* BOTÓN VOLVER - MEJORADO */
+/* ========================================== */
 
 .btn-volver {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   background: var(--azul);
   color: var(--blanco);
-  padding: 0.8rem 1.8rem;
+  padding: 0.9rem 2rem;
   border-radius: 100px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-top: 2rem;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .btn-volver:hover {
   background: var(--azul-medio);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
+}
+
+.btn-volver i {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-volver:hover i {
+  transform: translateX(-3px);
+}
+
+/* ========================================== */
+/* RESPONSIVE */
+/* ========================================== */
+
+@media (max-width: 768px) {
+  .terminos-main {
+    padding: 8rem 1.5rem 3rem;
+  }
+  
+  .terminos-contenido {
+    padding: 1.5rem;
+  }
+  
+  .terminos-contenido h2 {
+    font-size: 1.1rem;
+  }
+  
+  .terminos-contenido h2 i {
+    font-size: 1.2rem;
+    width: 1.5rem;
+  }
+  
+  .terminos-contenido p {
+    padding-left: 0;
+  }
+  
+  .terminos-header h1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .terminos-header h1 i {
+    font-size: 2.5rem;
+  }
+  
+  .terminos-header p {
+    text-align: center;
+  }
+  
+  .btn-volver {
+    width: 100%;
+    justify-content: center;
+  }
 }
