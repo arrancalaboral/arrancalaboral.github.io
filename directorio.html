@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directorio de Negocios - Arranca Laboral</title>
+  <meta name="description" content="Directorio de sitios web profesionales creados por Arranca Laboral. Landing pages, catálogos, e-commerce y más.">
+  <meta name="keywords" content="directorio, sitios web, landing pages, negocios, México">
+  <meta name="author" content="Arranca Laboral">
+  <link rel="icon" type="image/png" href="img/favicon-64x64.png">
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="css/core/variables.css">
+  <link rel="stylesheet" href="css/core/layout.css">
+  <link rel="stylesheet" href="css/core/components.css">
+  <link rel="stylesheet" href="css/pages/directorio.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- BANNER GLOBAL -->
+  <div class="banner-lanzamiento">
+    <i class="fas fa-fire"></i> Precios de lanzamiento — Solo por tiempo limitado.
+    <span style="opacity:0.85; font-weight:400;"> Los precios subirán pronto.</span>
+  </div>
+
+  <!-- NAVBAR GLOBAL -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO DIRECTORIO -->
+  <div class="hero-directorio">
+    <div class="hero-directorio-inner">
+      <div class="hero-tag">
+        <i class="fas fa-building"></i> Portafolio real
+      </div>
+      <h1>Sitios web que ya <span>entregamos</span></h1>
+      <p>Directorio de proyectos reales. Cada sitio es un caso de éxito que demuestra lo que podemos hacer por tu negocio.</p>
+    </div>
+  </div>
+
+  <!-- FILTROS CON DROPDOWNS -->
+  <div class="filtros-directorio">
+    <div class="filtros-inner">
+      
+      <div class="filtro-select">
+        <label><i class="fas fa-code"></i> Tipo de sitio</label>
+        <select id="select-tipo">
+          <option value="todos">Todos</option>
+          <option value="landing-page">Landing Page</option>
+          <option value="corporativa">Página Corporativa</option>
+          <option value="catalogo">Catálogo de Productos</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="blog">Blog / Noticias</option>
+        </select>
+      </div>
+
+      <div class="filtro-select">
+        <label><i class="fas fa-tag"></i> Rubro</label>
+        <select id="select-rubro">
+          <option value="todos">Todos</option>
+          <option value="alimentos">🍔 Alimentos</option>
+          <option value="productos">📦 Productos</option>
+          <option value="servicios">🔧 Servicios</option>
+          <option value="inmobiliaria">🏠 Inmobiliaria</option>
+        </select>
+      </div>
+
+      <div class="filtro-select">
+        <label><i class="fas fa-globe"></i> País</label>
+        <select id="select-pais">
+          <option value="todos">Todos</option>
+        </select>
+      </div>
+
+      <div class="filtro-select" id="grupo-estado" style="display: none;">
+        <label><i class="fas fa-map-marker-alt"></i> Estado</label>
+        <select id="select-estado">
+          <option value="todos">Todos</option>
+        </select>
+      </div>
+
+      <div class="filtro-select" id="grupo-ciudad" style="display: none;">
+        <label><i class="fas fa-city"></i> Ciudad</label>
+        <select id="select-ciudad">
+          <option value="todos">Todas</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DIRECTORIO PRINCIPAL -->
+  <section class="directorio-principal">
+    <div class="section-inner">
+      
+      <!-- PROYECTOS DESTACADOS -->
+      <div class="negocios-destacados" id="destacados-section">
+        <h3><i class="fas fa-crown" style="color: var(--verde);"></i> Proyectos Destacados</h3>
+        <div class="destacados-grid" id="destacados-grid"></div>
+      </div>
+
+      <!-- DIRECTORIO GRID -->
+      <div class="directorio-grid" id="directorio-grid"></div>
+
+      <!-- ESTADÍSTICAS -->
+      <div class="directorio-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="total-negocios">0</span>
+          <span class="stat-label">Proyectos entregados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Sitios activos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24-48h</span>
+          <span class="stat-label">Entrega exprés</span>
+        </div>
+      </div>
+
+      <!-- MENSAJE DE CRECIMIENTO -->
+      <div class="crecimiento-mensaje">
+        <i class="fas fa-chart-line"></i>
+        <h3>Directorio en crecimiento</h3>
+        <p>Actualmente tenemos <strong id="proyectos-actuales">2</strong> proyectos registrados. Cada semana agregamos nuevos casos de éxito.</p>
+        <p>¿Quieres ser el próximo en aparecer aquí?</p>
+        <a href="https://wa.me/529992223432?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20el%20directorio" target="_blank" class="btn-directorio">
+          <i class="fab fa-whatsapp"></i> <span>Registrar mi negocio</span>
+        </a>
+      </div>
+
+      <!-- UPGRADE CARD -->
+      <div class="upgrade-card">
+        <div class="upgrade-content">
+          <i class="fas fa-chart-line"></i>
+          <h3>¿Necesitas una página web?</h3>
+          <p>Tu negocio puede estar aquí. Creamos sitios web profesionales que atraen clientes y generan resultados.</p>
+          <a href="https://wa.me/529992223432?text=Hola,%20quiero%20cotizar%20mi%20página%20web" target="_blank" class="btn-directorio">
+            <i class="fab fa-whatsapp"></i> <span>Cotizar mi sitio web</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER GLOBAL -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/components.js"></script>
+  <script src="js/directorio-data.js"></script>
+</body>
+</html>

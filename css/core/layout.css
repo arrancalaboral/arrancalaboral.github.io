@@ -1,0 +1,216 @@
+/* ============================================
+   LAYOUT GLOBAL - Navbar, Banner, Footer
+   ============================================ */
+
+/* BANNER FIJO */
+.banner-lanzamiento {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 102;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #fff;
+  text-align: center;
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 2.1rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-logo-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+  color: var(--azul);
+}
+
+.nav-logo-text span {
+  color: var(--verde-oscuro);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--azul);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s;
+}
+
+.dropdown-toggle i {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.dropdown:hover .dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.dropdown-toggle:hover,
+.dropdown:hover .dropdown-toggle {
+  color: var(--verde-oscuro);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  left: -0.5rem;
+  background: var(--blanco);
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  transform: translateY(-6px);
+  z-index: 105;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--azul);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--gris-claro);
+  color: var(--verde-oscuro);
+  padding-left: 1.5rem;
+}
+
+.nav-links>li>a {
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.nav-links>li>a:hover {
+  color: var(--verde-oscuro);
+}
+
+.nav-links a.active {
+  color: var(--verde-oscuro);
+  font-weight: 700;
+}
+
+.nav-cta {
+  background: var(--verde) !important;
+  color: var(--blanco) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  font-weight: 700 !important;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.nav-cta:hover {
+  background: var(--verde-oscuro) !important;
+  color: white !important;
+}
+
+/* FOOTER */
+footer {
+  background: var(--negro);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-marca {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blanco);
+  letter-spacing: -0.02em;
+}
+
+.footer-marca span {
+  color: var(--verde);
+}
+
+footer a {
+  color: var(--verde);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}

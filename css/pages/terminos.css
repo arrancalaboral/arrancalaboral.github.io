@@ -1,0 +1,100 @@
+/* ============================================
+   TERMINOS.CSS - Estilos exclusivos de Términos y Condiciones
+   ============================================ */
+
+.terminos-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10rem 2rem 5rem;
+}
+
+.terminos-header {
+  margin-bottom: 2.5rem;
+}
+
+.terminos-header h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--azul);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.terminos-header p {
+  color: var(--gris-texto);
+  border-left: 4px solid var(--verde);
+  padding-left: 1.2rem;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.terminos-contenido {
+  background: var(--blanco);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(30, 58, 138, 0.08);
+}
+
+.terminos-contenido h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin: 2rem 0 0.8rem 0;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.terminos-contenido h2:first-of-type {
+  margin-top: 0;
+}
+
+.terminos-contenido p {
+  color: var(--negro);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+}
+
+.terminos-contenido strong {
+  color: var(--azul-medio);
+  font-weight: 600;
+}
+
+.terminos-contenido small {
+  display: block;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(30, 58, 138, 0.1);
+  color: var(--gris-texto);
+  font-size: 0.8rem;
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 0.8rem 1.8rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+
+.btn-volver:hover {
+  background: var(--azul-medio);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
+}

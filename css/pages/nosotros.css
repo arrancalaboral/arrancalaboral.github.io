@@ -1,0 +1,208 @@
+/* ============================================
+   NOSOTROS.CSS - Estilos exclusivos de la página Nosotros
+   ============================================ */
+
+/* HERO NOSOTROS */
+.hero-nosotros {
+  padding: 9rem 2rem 5rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-nosotros::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-nosotros-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--verde);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-nosotros h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: var(--blanco);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.2rem;
+}
+
+.hero-nosotros h1 span {
+  color: var(--verde);
+}
+
+.hero-nosotros p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+/* DIRECTOR */
+.director-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.director-card {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.director-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.director-avatar {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, var(--azul-medio), var(--verde-oscuro));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  position: relative;
+  z-index: 1;
+  color: var(--blanco);
+  font-size: 2rem;
+}
+
+.director-nombre {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--blanco);
+  margin-bottom: 0.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.director-titulo {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.director-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.badge-cred {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.badge-cred:hover {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.badge-cred-icon {
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--verde);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.badge-cred-text {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
+.badge-cred-text strong {
+  display: block;
+  color: var(--verde);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+.director-info h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--azul);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.director-info p {
+  font-size: 0.95rem;
+  color: var(--gris-texto);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.director-quote {
+  background: var(--gris-claro);
+  border-left: 3px solid var(--verde-oscuro);
+  border-radius: 0 12px 12px 0;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  color: var(--azul);
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}

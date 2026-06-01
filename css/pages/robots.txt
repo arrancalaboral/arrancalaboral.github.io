@@ -1,0 +1,10 @@
+# robots.txt para Arranca Laboral
+# https://www.arrancalaboral.com
+
+User-agent: *
+Allow: /
+Disallow: /components/
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://www.arrancalaboral.com/sitemap.xml

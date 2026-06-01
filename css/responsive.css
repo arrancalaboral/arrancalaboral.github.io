@@ -1,0 +1,68 @@
+/* ============================================
+   RESPONSIVE.CSS - Media queries globales
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Grids */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .equipo-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .pasos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Navegación */
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .dropdown-menu {
+    left: -1rem;
+    min-width: 180px;
+  }
+  
+  /* Hero index */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-btns {
+    justify-content: center;
+  }
+  
+  .hero-sub {
+    margin: 0 auto 2rem;
+  }
+  
+  .hero-visual img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Hero nosotros */
+  .director-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Términos */
+  .terminos-main {
+    padding: 8rem 1.5rem 3rem;
+  }
+  
+  .terminos-contenido {
+    padding: 1.5rem;
+  }
+  
+  /* Secciones generales */
+  section {
+    padding: 3rem 1.5rem;
+  }
+}

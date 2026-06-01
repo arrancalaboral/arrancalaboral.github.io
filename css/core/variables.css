@@ -1,0 +1,31 @@
+/* ============================================
+   VARIABLES Y RESET - Arranca Laboral
+   ============================================ */
+
+:root {
+  --azul: #1e3a8a;
+  --azul-medio: #2563eb;
+  --verde: #22c55e;
+  --verde-oscuro: #16a34a;
+  --blanco: #ffffff;
+  --gris-claro: #f0f4ff;
+  --gris-texto: #64748b;
+  --negro: #0f172a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--blanco);
+  color: var(--negro);
+  overflow-x: hidden;
+}
