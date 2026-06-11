@@ -1,20 +1,8 @@
 # Arranca Laboral
 
-Sitio web institucional de **Arranca Laboral** - plataforma de servicios profesionales para empleados, emprendedores y dueños de negocio. Hospedado en GitHub Pages.
+Sitio web institucional hospedado en GitHub Pages.
 
 🌐 **[arrancalaboral.github.io](https://arrancalaboral.github.io)**
-
----
-
-## ¿Qué es este proyecto?
-
-Arranca Laboral ofrece tres líneas de servicios:
-
-- **Empleo** - CVs, cartas de presentación y paquetes para quienes buscan trabajo
-- **Marca** - logos, animaciones, videos e imágenes para negocios
-- **Web** - landing pages profesionales y desarrollo a la medida
-
-El sitio funciona como vitrina de servicios con formularios de Google Forms para captura de pedidos y WhatsApp como canal principal de atención.
 
 ---
 
@@ -70,7 +58,6 @@ Página de inicio con todas las líneas de servicio.
 
 | Sección | ID | Descripción |
 |---|---|---|
-| Banner | - | Aviso de precios de lanzamiento |
 | Hero | `.hero` | Titular principal y acceso directo a servicios |
 | Cómo funciona | `.como-funciona` | Proceso en 4 pasos |
 | Empleo | `#b2c` | CVs, cartas y paquetes laborales |
@@ -80,28 +67,35 @@ Página de inicio con todas las líneas de servicio.
 | Contacto | `#contacto` | CTA final con botón de WhatsApp |
 
 ### `directorio.html` - Directorio de proyectos
-Portafolio de sitios web entregados con filtros por tipo, rubro, país, estado y ciudad. Incluye sección de registro al directorio con tres modalidades (cliente nuestro, externo, sin web).
+Portafolio de sitios web entregados. Los datos se cargan dinámicamente desde `js/directorio-data.js`.
 
-Los datos se cargan dinámicamente desde `js/directorio-data.js`.
+| ID | Descripción |
+|---|---|
+| `select-tipo` | Filtro por tipo de sitio |
+| `select-rubro` | Filtro por rubro |
+| `select-pais` | Filtro por país |
+| `select-estado` | Filtro por estado (se muestra al seleccionar país) |
+| `select-ciudad` | Filtro por ciudad (se muestra al seleccionar estado) |
+| `destacados-grid` | Contenedor donde se inyectan los proyectos destacados |
+| `directorio-grid` | Contenedor donde se inyectan todos los proyectos |
+| `total-negocios` | Contador de proyectos entregados |
 
 ### `nosotros.html` - Quiénes somos
-Presenta al director, credenciales del equipo, especialidades por área y valores de operación.
+Presenta al equipo, especialidades por área y valores de operación. Sin IDs de ancla.
 
 ### `terminos.html` - Términos y condiciones
-Condiciones de contratación, política de pagos, revisiones, cancelaciones y reembolsos.
+Condiciones de contratación, política de pagos, revisiones, cancelaciones y reembolsos. Sin IDs de ancla.
 
 ---
 
 ## Arquitectura CSS
 
-El CSS sigue una separación en tres capas:
-
 ```
-variables.css   →   tokens globales (colores, fuentes, radios)
-layout.css      →   estructura y grid del sitio
-components.css  →   piezas reutilizables (cards, botones, badges, navbar)
-pages/*.css     →   estilos exclusivos por página
-responsive.css  →   breakpoints y ajustes móvil
+variables.css   ->  tokens globales (colores, fuentes, radios)
+layout.css      ->  estructura y grid del sitio
+components.css  ->  piezas reutilizables (cards, botones, badges, navbar)
+pages/*.css     ->  estilos exclusivos por página
+responsive.css  ->  breakpoints y ajustes móvil
 ```
 
 Regla: **los estilos de componentes van en `components.css`, no en los archivos de página.** Si un estilo se repite en dos páginas, sube a components.
@@ -119,24 +113,7 @@ Banner, navbar y footer se inyectan dinámicamente en todas las páginas mediant
 <div id="footer-placeholder"></div>
 ```
 
-La carga está encadenada con promesas para garantizar el orden correcto: banner → navbar → footer. Cada componente espera al anterior antes de inyectarse, evitando que aparezcan fuera de orden.
-
-Esto permite actualizar cualquier componente global en un solo archivo para todo el sitio.
-
----
-
-## Formularios
-
-Los pedidos se capturan con Google Forms. Cada botón de servicio enlaza directamente a su formulario con el servicio preseleccionado via parámetros URL (`entry.*`).
-
-| Servicio | Formulario |
-|---|---|
-| Servicios de empleo (CV, carta, paquetes) | Google Forms B2C |
-| Servicios de marca (logo, animación, video) | Google Forms B2B |
-| Landing page web | Google Forms Web |
-| Testimonios | Google Forms Testimonios |
-
-Las respuestas se registran automáticamente en Google Sheets para seguimiento de pedidos.
+La carga está encadenada con promesas para garantizar el orden correcto: banner -> navbar -> footer. Cada componente espera al anterior antes de inyectarse.
 
 ---
 
@@ -149,18 +126,6 @@ Las respuestas se registran automáticamente en Google Sheets para seguimiento d
 | Inter | - | Tipografía secundaria (cuerpo) |
 
 Todas se cargan desde CDN, no hay dependencias instaladas localmente.
-
----
-
-## Despliegue
-
-El sitio se hospeda en **GitHub Pages** directamente desde la rama `main`.
-
-```
-rama main → GitHub Pages → arrancalaboral.github.io
-```
-
-No hay proceso de build. Los cambios en `main` se reflejan en el sitio en pocos minutos.
 
 ---
 
@@ -178,9 +143,3 @@ refactor: mueve X a Y
 docs: documenta X
 chore: agrega / elimina / renombra X
 ```
-
----
-
-## Contacto
-
-**WhatsApp:** [wa.me/529992223432](https://wa.me/529992223432)
