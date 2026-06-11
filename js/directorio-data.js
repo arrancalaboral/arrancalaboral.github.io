@@ -149,6 +149,8 @@ function obtenerCiudadesPorPaisYEstado(pais, estado) {
 // FUNCIONES DE FORMATEO
 // ============================================
 
+// Los emojis son intencionales - actúan como iconos de color
+// dentro de los badges y complementan el fondo de color de cada etiqueta
 function formatearTipoWeb(tipo) {
   const tipos = {
     'landing-page': '🚀 Landing Page',
