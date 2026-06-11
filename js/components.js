@@ -1,39 +1,41 @@
-// Cargar navbar y footer en todas las páginas
+// Cargar componentes globales en orden: banner → navbar → footer
 document.addEventListener('DOMContentLoaded', function() {
-  
-  // Cargar navbar
-  fetch('/components/navbar.html')
+
+  // Cargar banner
+  fetch('/components/banner.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('banner-placeholder').innerHTML = data;
+
+      // Cargar navbar después del banner
+      return fetch('/components/navbar.html');
+    })
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
-      
+
       // Marcar el enlace activo según la página actual
       const currentPage = window.location.pathname;
-      
+
       // Directorio
       const directorioLink = document.getElementById('nav-directorio');
-      if (directorioLink) {
-        if (currentPage.includes('/directorio')) {
-          directorioLink.classList.add('active');
-        }
+      if (directorioLink && currentPage.includes('/directorio')) {
+        directorioLink.classList.add('active');
       }
-      
+
       // Nosotros
       const nosotrosLink = document.getElementById('nav-nosotros');
-      if (nosotrosLink) {
-        if (currentPage.includes('/nosotros')) {
-          nosotrosLink.classList.add('active');
-        }
+      if (nosotrosLink && currentPage.includes('/nosotros')) {
+        nosotrosLink.classList.add('active');
       }
+
+      // Cargar footer después de navbar
+      return fetch('/components/footer.html');
     })
-    .catch(error => console.error('Error cargando navbar:', error));
-  
-  // Cargar footer
-  fetch('/components/footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
     })
-    .catch(error => console.error('Error cargando footer:', error));
-  
+    .catch(error => console.error('Error cargando componentes:', error));
+
 });
