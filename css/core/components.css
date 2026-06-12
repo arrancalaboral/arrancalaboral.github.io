@@ -158,34 +158,6 @@ section {
   margin-top: 0.25rem;
 }
 
-.card-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  align-self: flex-start;
-  margin-top: 1.2rem;
-  background: var(--azul);
-  color: var(--blanco);
-  padding: 0.6rem 1.4rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 700;
-  transition: background 0.2s;
-}
-
-.card-btn:hover {
-  background: var(--azul-medio);
-}
-
-.card-btn.verde-btn {
-  background: var(--verde-oscuro);
-}
-
-.card-btn.verde-btn:hover {
-  background: var(--verde);
-}
-
 .card-limite {
   font-size: 0.75rem;
   color: var(--gris-texto);
@@ -222,19 +194,25 @@ section {
   letter-spacing: 0.04em;
 }
 
-/* BOTONES */
+/* ============================================
+   BOTONES UNIFICADOS
+   ============================================ */
+
+/* Primario: azul sólido (comprar, acción principal) */
 .btn-primary {
   background: var(--azul);
   color: var(--blanco);
-  padding: 0.9rem 2rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 100px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -243,19 +221,21 @@ section {
   box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
 }
 
+/* Secundario azul: contorno azul (opciones secundarias) */
 .btn-secondary {
   background: transparent;
   color: var(--azul);
-  padding: 0.9rem 2rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 100px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.95rem;
-  border: 2px solid var(--azul);
+  font-size: 0.9rem;
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  border: 2px solid var(--azul);
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -263,6 +243,75 @@ section {
   color: var(--blanco);
 }
 
+/* Secundario verde: contorno verde (opciones verdes secundarias) */
+.btn-secondary-green {
+  background: transparent;
+  color: var(--verde-oscuro);
+  padding: 0.7rem 1.8rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid var(--verde-oscuro);
+  cursor: pointer;
+}
+
+.btn-secondary-green:hover {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+/* Secundario blanco: borde blanco, texto blanco (para fondos oscuros) */
+.btn-secondary-white {
+  background: transparent;
+  color: var(--blanco);
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid var(--blanco);
+  cursor: pointer;
+}
+
+.btn-secondary-white:hover {
+  background: var(--blanco);
+  color: var(--azul);
+  transform: translateY(-2px);
+}
+
+/* WhatsApp: verde sólido (acción directa de conversación) */
+.btn-wa {
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 0.7rem 1.8rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-wa:hover {
+  background: var(--verde-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.25);
+}
+
+/* Botón blanco: fondo blanco, texto azul (casos especiales como divider) */
 .btn-white {
   background: var(--blanco);
   color: var(--azul);
@@ -270,16 +319,28 @@ section {
   border-radius: 100px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  transition: all 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-white:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Versión pequeña de botones (para cards y espacios reducidos) */
+.btn-primary-sm,
+.btn-secondary-sm,
+.btn-secondary-green-sm,
+.btn-wa-sm,
+.btn-white-sm {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
 }
 
 /* METODOLOGÍA (fondo oscuro) */
