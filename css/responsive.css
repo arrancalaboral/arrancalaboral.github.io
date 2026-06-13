@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
 
-    /* ========== NAVBAR RESPONSIVE ========== */
+  /* ========== NAVBAR ========== */
   nav {
     flex-direction: column;
     align-items: center;
@@ -97,7 +97,7 @@
   }
   
   .nav-logo-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   .nav-links {
@@ -142,18 +142,6 @@
   
   .pasos {
     grid-template-columns: 1fr;
-  }
-  
-  /* ========== NAVEGACIÓN ========== */
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .dropdown-menu {
-    left: -1rem;
-    min-width: 180px;
   }
   
   /* ========== HERO INDEX ========== */
@@ -254,6 +242,7 @@
   }
   
   /* ========== BOTONES RESPONSIVOS ========== */
+  /* Todos los botones base */
   .btn-primary,
   .btn-secondary,
   .btn-secondary-green,
@@ -266,9 +255,11 @@
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  /* Botones dentro de cards y opciones (excepto upgrade-card) */
+  /* Botones dentro de cards y opciones */
   .card .btn-primary,
   .card .btn-secondary,
   .card .btn-secondary-green,
@@ -278,7 +269,23 @@
   .opcion-card .btn-secondary-green {
     width: 100%;
     display: flex;
-    box-sizing: border-box;
+  }
+  
+  /* Botones dobles se apilan */
+  .hero-btns,
+  .cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary,
+  .hero-btns .btn-wa,
+  .cta-btns .btn-primary,
+  .cta-btns .btn-secondary,
+  .cta-btns .btn-wa {
+    width: 100%;
+    justify-content: center;
   }
   
   /* ========== PREVENIR DESBORDAMIENTO ========== */
@@ -327,6 +334,7 @@
   .btn-white {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
+    width: 100%;
   }
   
   /* ========== ESTADÍSTICAS ========== */

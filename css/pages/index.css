@@ -178,3 +178,7 @@
   font-weight: 700;
   margin-top: 2rem;
 }
+
+#contacto .section-inner::before {
+  margin: 0 auto 1rem;
+}

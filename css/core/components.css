@@ -198,44 +198,59 @@ section {
    BOTONES UNIFICADOS
    ============================================ */
 
-/* Primario: azul sólido (comprar, acción principal) */
+/* BASE DE TODOS LOS BOTONES */
+.btn-primary,
+.btn-secondary,
+.btn-secondary-green,
+.btn-secondary-white,
+.btn-wa,
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Hover base para todos */
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-secondary-green:hover,
+.btn-secondary-white:hover,
+.btn-wa:hover,
+.btn-white:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   COLORES ESPECÍFICOS
+   ============================================ */
+
+/* Primario azul sólido */
 .btn-primary {
   background: var(--azul);
   color: var(--blanco);
-  padding: 0.7rem 1.8rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  cursor: pointer;
 }
 
 .btn-primary:hover {
   background: var(--azul-medio);
-  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
 }
 
-/* Secundario azul: contorno azul (opciones secundarias) */
+/* Secundario azul contorno */
 .btn-secondary {
   background: transparent;
   color: var(--azul);
-  padding: 0.7rem 1.8rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   border: 2px solid var(--azul);
-  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -243,21 +258,11 @@ section {
   color: var(--blanco);
 }
 
-/* Secundario verde: contorno verde (opciones verdes secundarias) */
+/* Secundario verde contorno */
 .btn-secondary-green {
   background: transparent;
   color: var(--verde-oscuro);
-  padding: 0.7rem 1.8rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   border: 2px solid var(--verde-oscuro);
-  cursor: pointer;
 }
 
 .btn-secondary-green:hover {
@@ -265,71 +270,36 @@ section {
   color: var(--blanco);
 }
 
-/* Secundario blanco: borde blanco, texto blanco (para fondos oscuros) */
+/* Secundario blanco contorno (para fondos oscuros) */
 .btn-secondary-white {
   background: transparent;
   color: var(--blanco);
-  padding: 0.5rem 1.2rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   border: 2px solid var(--blanco);
-  cursor: pointer;
 }
 
 .btn-secondary-white:hover {
   background: var(--blanco);
   color: var(--azul);
-  transform: translateY(-2px);
 }
 
-/* WhatsApp: verde sólido (acción directa de conversación) */
+/* WhatsApp verde sólido */
 .btn-wa {
   background: var(--verde);
   color: var(--blanco);
-  padding: 0.7rem 1.8rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  cursor: pointer;
 }
 
 .btn-wa:hover {
   background: var(--verde-oscuro);
-  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(34, 197, 94, 0.25);
 }
 
-/* Botón blanco: fondo blanco, texto azul (casos especiales como divider) */
+/* Blanco sólido (casos especiales como divider) */
 .btn-white {
   background: var(--blanco);
   color: var(--azul);
-  padding: 0.8rem 2rem;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  cursor: pointer;
 }
 
 .btn-white:hover {
-  transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -337,6 +307,7 @@ section {
 .btn-primary-sm,
 .btn-secondary-sm,
 .btn-secondary-green-sm,
+.btn-secondary-white-sm,
 .btn-wa-sm,
 .btn-white-sm {
   padding: 0.5rem 1.2rem;
