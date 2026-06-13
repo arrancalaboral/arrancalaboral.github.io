@@ -36,12 +36,13 @@ arrancalaboral.github.io/
 │
 ├── js/
 │   ├── components.js       # Carga encadenada de banner, navbar y footer
+│   ├── directorio.js       # Lógica del directorio (ES6 module)
 │   └── directorio-data.js  # Datos de proyectos del directorio (array de objetos)
 │
 ├── img/
 │   ├── directorio/         # Logos de negocios listados en el directorio
 │   ├── logo-arranca.png    # Logo principal
-│   └── favicon-64x64.png  # Favicon
+│   └── favicon-64x64.png   # Favicon
 │
 ├── CNAME                   # Dominio personalizado para GitHub Pages
 ├── robots.txt              # Configuración para motores de búsqueda
@@ -67,7 +68,7 @@ Página de inicio con todas las líneas de servicio.
 | Contacto | `#contacto` | CTA final con botón de WhatsApp |
 
 ### `directorio.html` - Directorio de proyectos
-Portafolio de sitios web entregados. Los datos se cargan dinámicamente desde `js/directorio-data.js`.
+Portafolio de sitios web entregados. Los datos se cargan dinámicamente desde `js/directorio.js` (ES6 module) y `js/directorio-data.js`.
 
 | ID | Descripción |
 |---|---|
@@ -98,7 +99,10 @@ pages/*.css     ->  estilos exclusivos por página
 responsive.css  ->  breakpoints y ajustes móvil
 ```
 
-Regla: **los estilos de componentes van en `components.css`, no en los archivos de página.** Si un estilo se repite en dos páginas, sube a components.
+**Reglas:**
+- Los estilos de componentes van en `components.css`, no en los archivos de página.
+- Si un estilo se repite en dos páginas, sube a `components.css`.
+- `responsive.css` maneja TODOS los breakpoints globales incluyendo navbar y footer.
 
 ---
 
@@ -114,6 +118,21 @@ Banner, navbar y footer se inyectan dinámicamente en todas las páginas mediant
 ```
 
 La carga está encadenada con promesas para garantizar el orden correcto: banner -> navbar -> footer. Cada componente espera al anterior antes de inyectarse.
+
+---
+
+## Botones unificados
+
+| Clase | Uso | Color |
+|-------|-----|-------|
+| `btn-primary` | Comprar, acción principal | Azul sólido |
+| `btn-secondary` | Opción secundaria | Contorno azul |
+| `btn-secondary-green` | Opción secundaria verde | Contorno verde |
+| `btn-secondary-white` | Opción secundaria sobre fondo oscuro | Contorno blanco |
+| `btn-wa` | WhatsApp, conversación directa | Verde sólido |
+| `btn-white` | Casos especiales (divider) | Blanco sólido, texto azul |
+
+**Regla de uso:** Azul para comprar, verde para conversar.
 
 ---
 
