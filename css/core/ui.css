@@ -585,6 +585,7 @@ section {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
+    max-width: 280px;
   }
   
   .card .btn-primary,
@@ -594,12 +595,14 @@ section {
   .card .btn-wa {
     width: 100%;
     display: flex;
+    max-width: 100%;
   }
   
   .hero-btns,
   .cta-btns {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 1rem !important;
   }
   
   .hero-btns .btn-primary,
@@ -610,6 +613,7 @@ section {
   .cta-btns .btn-wa {
     width: 100%;
     justify-content: center;
+    max-width: 280px;
   }
   
   .opcion-card,
@@ -641,5 +645,6 @@ section {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
     width: 100%;
+    max-width: 280px;
   }
 }
