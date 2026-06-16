@@ -31,7 +31,7 @@ export const negociosData = [
     descripcion: "Centro especializado en reparación de computadoras y laptops. Landing page completa con servicios, testimonios, ubicación y botones de acción.",
     url: "https://turbofixcenter.com",
     logoInicial: "T",
-    logoImg: "img/directorio/turbofix-logo.png",  // ← imagen opcional
+    logoImg: "img/directorio/turbofix-logo.webp",  // ← imagen opcional
     destacado: true,
     ubicacion: {
       pais: "México",
@@ -53,7 +53,7 @@ export const negociosData = [
     descripcion: "Catálogo en línea de acero estructural. Sistema de cotización integrado y envíos a todo México.",
     url: "https://reinaaceros.com",
     logoInicial: "R",
-    // logoImg: "img/directorio/reinaaceros-logo.png",  // ← descomentar cuando tenga imagen
+    logoImg: "img/directorio/reinaaceros-logo.webp",  // ← descomentar cuando tenga imagen
     destacado: false,
     cobertura: "nacional",
     ubicacion: {
