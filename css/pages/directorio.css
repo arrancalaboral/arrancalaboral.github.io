@@ -2,7 +2,9 @@
    DIRECTORIO.CSS - Estilos exclusivos del directorio
    ============================================ */
 
-/* HERO DIRECTORIO */
+/* ============================================
+   HERO DIRECTORIO - BASE
+   ============================================ */
 .hero-directorio {
   padding: 9rem 2rem 5rem;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
@@ -65,7 +67,9 @@
   max-width: 600px;
 }
 
-/* FILTROS CON DROPDOWNS */
+/* ============================================
+   FILTROS CON DROPDOWNS - BASE
+   ============================================ */
 .filtros-directorio {
   background: var(--blanco);
   border-bottom: 1px solid rgba(30, 58, 138, 0.08);
@@ -123,7 +127,9 @@
   box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
 }
 
-/* DIRECTORIO PRINCIPAL */
+/* ============================================
+   DIRECTORIO PRINCIPAL - BASE
+   ============================================ */
 .directorio-principal {
   padding: 3rem 2rem 5rem;
   background: var(--gris-claro);
@@ -163,7 +169,9 @@
   margin-bottom: 3rem;
 }
 
-/* TARJETA DE NEGOCIO */
+/* ============================================
+   TARJETA DE NEGOCIO - BASE
+   ============================================ */
 .negocio-card {
   background: var(--blanco);
   border-radius: 20px;
@@ -303,7 +311,9 @@
   gap: 0.7rem;
 }
 
-/* ESTADÍSTICAS */
+/* ============================================
+   ESTADÍSTICAS - BASE
+   ============================================ */
 .directorio-stats {
   display: flex;
   justify-content: center;
@@ -333,10 +343,9 @@
   color: var(--gris-texto);
 }
 
-/* ========================================== */
-/* SECCIÓN DE REGISTRO AL DIRECTORIO */
-/* ========================================== */
-
+/* ============================================
+   SECCIÓN DE REGISTRO AL DIRECTORIO - BASE
+   ============================================ */
 .registro-directorio {
   background: var(--blanco);
   border-radius: 28px;
@@ -496,10 +505,9 @@
   text-align: center;
 }
 
-/* ========================================== */
-/* UPGRADE CARD */
-/* ========================================== */
-
+/* ============================================
+   UPGRADE CARD - BASE
+   ============================================ */
 .upgrade-card {
   background: linear-gradient(135deg, #0f172a, #1e3a8a);
   border-radius: 28px;
@@ -529,28 +537,7 @@
   line-height: 1.6;
 }
 
-/* ========================================== */
-/* EMPTY STATE */
-/* ========================================== */
-
-.empty-state {
-  text-align: center;
-  padding: 3rem;
-  background: var(--blanco);
-  border-radius: 20px;
-  color: var(--gris-texto);
-}
-
-.empty-state i {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-/* ========================================== */
-/* FORZAR ESTILO CORRECTO EN BOTÓN DE UPGRADE CARD */
-/* ========================================== */
-
+/* Forzar estilo correcto en botón de upgrade card */
 .upgrade-card .btn-wa {
   display: inline-flex !important;
   align-items: center !important;
@@ -593,3 +580,104 @@
   color: white !important;
 }
 
+/* ============================================
+   EMPTY STATE - BASE
+   ============================================ */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: var(--blanco);
+  border-radius: 20px;
+  color: var(--gris-texto);
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* ============================================
+   DIRECTORIO - RESPONSIVE
+   ============================================ */
+
+/* TABLET (hasta 992px) */
+@media (max-width: 992px) {
+  .hero-directorio {
+    padding: 8rem 1.5rem 4rem;
+  }
+  
+  .destacados-grid,
+  .directorio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .filtro-select {
+    min-width: calc(50% - 0.5rem);
+  }
+  
+  .registro-opciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MÓVIL (hasta 768px) */
+@media (max-width: 768px) {
+  .hero-directorio h1 {
+    font-size: 1.8rem;
+  }
+  
+  .filtros-directorio {
+    top: 5rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .filtro-select {
+    min-width: 100%;
+  }
+  
+  .destacados-grid,
+  .directorio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .directorio-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .registro-opciones {
+    grid-template-columns: 1fr;
+  }
+  
+  .registro-tabla th,
+  .registro-tabla td {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+  
+  .upgrade-card {
+    padding: 1.5rem;
+  }
+}
+
+/* MÓVIL PEQUEÑO (hasta 480px) */
+@media (max-width: 480px) {
+  .hero-directorio h1 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.2rem;
+  }
+  
+  .registro-tabla th,
+  .registro-tabla td {
+    font-size: 0.6rem;
+    padding: 0.3rem;
+  }
+}

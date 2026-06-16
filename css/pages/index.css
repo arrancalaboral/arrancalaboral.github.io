@@ -2,7 +2,9 @@
    INDEX.CSS - Estilos exclusivos del home
    ============================================ */
 
-/* HERO */
+/* ============================================
+   HERO - BASE
+   ============================================ */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -102,7 +104,9 @@
   50% { transform: translateY(-18px); }
 }
 
-/* CÓMO FUNCIONA */
+/* ============================================
+   CÓMO FUNCIONA - BASE
+   ============================================ */
 .como-funciona {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
@@ -181,4 +185,44 @@
 
 #contacto .section-inner::before {
   margin: 0 auto 1rem;
+}
+
+/* ============================================
+   INDEX - RESPONSIVE
+   ============================================ */
+
+/* TABLET (hasta 992px) */
+@media (max-width: 992px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-btns {
+    justify-content: center;
+  }
+  
+  .hero-visual img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* MÓVIL (hasta 768px) */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-sub {
+    margin: 0 auto 2rem;
+  }
+}
+
+/* MÓVIL PEQUEÑO (hasta 480px) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
 }

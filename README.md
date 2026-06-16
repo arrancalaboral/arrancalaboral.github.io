@@ -20,22 +20,21 @@ arrancalaboral.github.io/
 ├── css/
 │   ├── core/
 │   │   ├── variables.css   # Tokens de diseño: colores, tipografía, espaciado
-│   │   ├── layout.css      # Estructura base, grid, secciones
-│   │   └── components.css  # Componentes reutilizables: cards, botones, badges
-│   ├── pages/
-│   │   ├── index.css       # Estilos exclusivos de index.html
-│   │   ├── directorio.css  # Estilos exclusivos de directorio.html
-│   │   ├── nosotros.css    # Estilos exclusivos de nosotros.html
-│   │   └── terminos.css    # Estilos exclusivos de terminos.html
-│   └── responsive.css      # Media queries globales
+│   │   ├── layout.css      # Estructura global: navbar, footer, menú móvil + media queries
+│   │   └── ui.css          # Estilos visuales reutilizables: cards, botones, badges + media queries
+│   └── pages/
+│       ├── index.css       # Estilos exclusivos de index.html + media queries
+│       ├── directorio.css  # Estilos exclusivos de directorio.html + media queries
+│       ├── nosotros.css    # Estilos exclusivos de nosotros.html + media queries
+│       └── terminos.css    # Estilos exclusivos de terminos.html + media queries
 │
-├── components/
+├── layout/
 │   ├── banner.html         # Banner de lanzamiento global
-│   ├── navbar.html         # Navbar global
+│   ├── navbar.html         # Navbar global (incluye menú móvil)
 │   └── footer.html         # Footer global
 │
 ├── js/
-│   ├── components.js       # Carga encadenada de banner, navbar y footer
+│   ├── layout.js           # Carga de banner, navbar, footer + lógica del menú móvil
 │   ├── directorio.js       # Lógica del directorio (ES6 module)
 │   └── directorio-data.js  # Datos de proyectos del directorio (array de objetos)
 │
@@ -91,24 +90,35 @@ Condiciones de contratación, política de pagos, revisiones, cancelaciones y re
 
 ## Arquitectura CSS
 
+Cada archivo CSS contiene sus propios media queries al final, organizados por secciones. No existe un `responsive.css` global.
+
 ```
-variables.css   ->  tokens globales (colores, fuentes, radios)
-layout.css      ->  estructura y grid del sitio
-components.css  ->  piezas reutilizables (cards, botones, badges, navbar)
-pages/*.css     ->  estilos exclusivos por página
-responsive.css  ->  breakpoints y ajustes móvil
+core/variables.css  ->  tokens globales (colores, fuentes, radios)
+core/layout.css     ->  estructura global: navbar, footer, menú móvil + media queries
+core/ui.css         ->  piezas visuales reutilizables: cards, botones, badges + media queries
+pages/*.css         ->  estilos exclusivos por página + media queries
 ```
 
 **Reglas:**
-- Los estilos de componentes van en `components.css`, no en los archivos de página.
-- Si un estilo se repite en dos páginas, sube a `components.css`.
-- `responsive.css` maneja TODOS los breakpoints globales incluyendo navbar y footer.
+- Cada archivo es autocontenido: estilos base y sus media queries juntos.
+- Los estilos visuales reutilizables van en `ui.css`, no en los archivos de página.
+- Si un estilo se repite en dos páginas, sube a `ui.css`.
+- No hay `responsive.css` global — cada archivo maneja sus propios breakpoints.
+
+**Carga por página:**
+```html
+<!-- Ejemplo: directorio.html -->
+<link rel="stylesheet" href="css/core/variables.css">
+<link rel="stylesheet" href="css/core/layout.css">
+<link rel="stylesheet" href="css/core/ui.css">
+<link rel="stylesheet" href="css/pages/directorio.css">
+```
 
 ---
 
 ## Componentes globales
 
-Banner, navbar y footer se inyectan dinámicamente en todas las páginas mediante `js/components.js`. Cada página declara sus placeholders en este orden:
+Banner, navbar y footer se inyectan dinámicamente en todas las páginas mediante `js/layout.js`. Cada página declara sus placeholders en este orden:
 
 ```html
 <div id="banner-placeholder"></div>
@@ -117,7 +127,7 @@ Banner, navbar y footer se inyectan dinámicamente en todas las páginas mediant
 <div id="footer-placeholder"></div>
 ```
 
-La carga está encadenada con promesas para garantizar el orden correcto: banner -> navbar -> footer. Cada componente espera al anterior antes de inyectarse.
+La carga está encadenada con promesas para garantizar el orden correcto: banner → navbar → footer. Cada componente espera al anterior antes de inyectarse.
 
 ---
 

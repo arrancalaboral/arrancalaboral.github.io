@@ -2,7 +2,9 @@
    NOSOTROS.CSS - Estilos exclusivos de la página Nosotros
    ============================================ */
 
-/* HERO NOSOTROS */
+/* ============================================
+   HERO NOSOTROS - BASE
+   ============================================ */
 .hero-nosotros {
   padding: 9rem 2rem 5rem;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
@@ -65,7 +67,9 @@
   max-width: 600px;
 }
 
-/* DIRECTOR */
+/* ============================================
+   DIRECTOR - BASE
+   ============================================ */
 .director-grid {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
@@ -205,4 +209,23 @@
   font-style: italic;
   line-height: 1.6;
   margin-top: 1.5rem;
+}
+
+/* ============================================
+   NOSOTROS - RESPONSIVE
+   ============================================ */
+
+/* TABLET (hasta 992px) */
+@media (max-width: 992px) {
+  .director-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* MÓVIL (hasta 768px) */
+@media (max-width: 768px) {
+  .director-grid {
+    grid-template-columns: 1fr;
+  }
 }

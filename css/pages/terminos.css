@@ -2,6 +2,9 @@
    TERMINOS.CSS - Estilos exclusivos de Términos y Condiciones
    ============================================ */
 
+/* ============================================
+   TERMINOS - BASE
+   ============================================ */
 .terminos-main {
   max-width: 1000px;
   margin: 0 auto;
@@ -102,11 +105,55 @@
   margin-top: 2rem;
 }
 
-/* ========================================== */
-/* CONTENEDOR DEL BOTÓN VOLVER */
-/* ========================================== */
-
 .terminos-button-wrapper {
   text-align: center;
   margin-top: 2rem;
+}
+
+/* ============================================
+   TERMINOS - RESPONSIVE
+   ============================================ */
+
+/* TABLET (hasta 992px) */
+@media (max-width: 992px) {
+  .terminos-main {
+    padding: 8rem 1.5rem 3rem;
+  }
+}
+
+/* MÓVIL (hasta 768px) */
+@media (max-width: 768px) {
+  .terminos-main {
+    padding: 8rem 1.5rem 3rem;
+  }
+  
+  .terminos-contenido {
+    padding: 1.5rem;
+  }
+  
+  .terminos-contenido h2 {
+    font-size: 1.1rem;
+  }
+  
+  .terminos-contenido h2 i {
+    font-size: 1.2rem;
+    width: 1.5rem;
+  }
+  
+  .terminos-contenido p {
+    padding-left: 0;
+  }
+  
+  .terminos-header h1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .terminos-header h1 i {
+    font-size: 2.5rem;
+  }
+  
+  .terminos-header p {
+    text-align: center;
+  }
 }

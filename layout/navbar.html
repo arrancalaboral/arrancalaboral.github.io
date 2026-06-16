@@ -1,0 +1,97 @@
+<!-- NAVBAR DESKTOP + MENÚ MÓVIL -->
+<nav>
+  <!-- LOGO -->
+  <a href="index.html" class="nav-logo">
+    <img src="img/logo-arranca.png" alt="Arranca Laboral" />
+    <span class="nav-logo-text">Arranca <span>Laboral</span>
+      <span class="nav-logo-sub">De empleado a dueño</span>
+    </span>
+  </a>
+
+  <!-- BOTÓN HAMBURGUESA -->
+  <button class="menu-open-btn" id="menu-open-btn" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- BOTÓN WHATSAPP MÓVIL (SIN la clase btn-wa) -->
+  <a href="https://wa.me/529992223432" class="btn-header-wa-mobile" target="_blank">
+    <i class="fab fa-whatsapp"></i> Cotizar
+  </a>
+
+  <!-- PANEL PRINCIPAL -->
+  <ul class="nav-links" id="nav-links">
+
+    <!-- X de cierre -->
+    <li class="nav-close-item">
+      <button class="nav-close-btn" id="nav-close-btn" aria-label="Cerrar menú">
+        <i class="fas fa-times"></i>
+      </button>
+    </li>
+
+    <!-- SERVICIOS -->
+    <li class="dropdown" id="nav-servicios">
+      <a href="javascript:void(0)" class="dropdown-toggle" id="servicios-toggle">
+        Servicios <i class="fas fa-chevron-down"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="index.html#b2c">Empleo</a></li>
+        <li><a href="index.html#b2b">Negocios</a></li>
+        <li><a href="index.html#web">Web</a></li>
+      </ul>
+    </li>
+
+    <li><a href="directorio.html" id="nav-directorio">Directorio</a></li>
+    <li><a href="nosotros.html" id="nav-nosotros">Nosotros</a></li>
+
+    <!-- Botón WhatsApp en panel móvil -->
+    <li class="nav-cta-item">
+      <a href="https://wa.me/529992223432" class="btn-wa btn-mobile" target="_blank">
+        <i class="fab fa-whatsapp"></i> Cotizar ahora
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- PANEL SECUNDARIO: Servicios -->
+  <div class="nav-panel-servicios" id="nav-panel-servicios">
+    <!-- HEADER: Atrás + X -->
+    <div class="nav-panel-header">
+      <button class="nav-back-btn" id="nav-back-btn">
+        <i class="fas fa-chevron-left"></i> Atrás
+      </button>
+      <button class="nav-close-btn" id="nav-close-btn-panel" aria-label="Cerrar menú">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <p class="nav-panel-titulo">Servicios</p>
+    <a href="index.html#b2c" class="nav-panel-item">
+      <div class="nav-panel-icon"><i class="fas fa-briefcase"></i></div>
+      <div>
+        <span class="nav-panel-nombre">Empleo</span>
+        <span class="nav-panel-desc">CVs, cartas y paquetes laborales</span>
+      </div>
+    </a>
+    <a href="index.html#b2b" class="nav-panel-item">
+      <div class="nav-panel-icon"><i class="fas fa-store"></i></div>
+      <div>
+        <span class="nav-panel-nombre">Negocios</span>
+        <span class="nav-panel-desc">Logos, animaciones, videos e imágenes</span>
+      </div>
+    </a>
+    <a href="index.html#web" class="nav-panel-item">
+      <div class="nav-panel-icon"><i class="fas fa-globe"></i></div>
+      <div>
+        <span class="nav-panel-nombre">Web</span>
+        <span class="nav-panel-desc">Landing pages y desarrollo a la medida</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Botón WhatsApp desktop -->
+  <a href="https://wa.me/529992223432" class="btn-wa btn-header-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i> Cotizar ahora
+  </a>
+</nav>
+
+<!-- Overlay -->
+<div class="nav-overlay" id="nav-overlay"></div>
