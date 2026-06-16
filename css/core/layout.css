@@ -2,6 +2,11 @@
    LAYOUT - BANNER, NAVBAR, FOOTER
    ============================================ */
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* ============================================
    BANNER - BASE
    ============================================ */
@@ -37,6 +42,9 @@ nav {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+  overflow-x: clip;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-logo {
@@ -302,6 +310,9 @@ footer a:hover {
     gap: 0.5rem;
     min-height: 65px;
     top: 2.4rem;
+    overflow-x: clip;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .nav-logo {
