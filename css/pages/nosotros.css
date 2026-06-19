@@ -228,4 +228,42 @@
   .director-grid {
     grid-template-columns: 1fr;
   }
+
+  .cta-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .cta-btns a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .cta-final h2 {
+    text-align: center;
+  }
+
+  .cta-final p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* MÓVIL PEQUEÑO (hasta 480px) */
+@media (max-width: 480px) {
+  .cta-btns {
+    max-width: 280px;
+  }
+  
+  .cta-btns a {
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
 }
